@@ -1,0 +1,9 @@
+.todoActivityTitle {
+  margin-left: 30px;
+  font-size: 1.25rem;
+}
+
+.doneActivity {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
