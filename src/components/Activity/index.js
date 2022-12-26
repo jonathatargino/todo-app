@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Checkbox from "../Checkbox";
 import "./style.css"
+import ActivityTitle from "../ActivityTitle";
 
 function Activity({title}){
+  const [isDone, setIsDone] = useState(false);
   return (
     <div className="todoActivity">
-      <Checkbox onClick={() => document.getElementById("todoActivityTitle").classList.toggle("doneActivity")}/>
-      <span id="todoActivityTitle">{title}</span>
+      <Checkbox onClick={() => isDone? setIsDone(false) : setIsDone(true)}/>
+      <ActivityTitle title={title} isDone={isDone}/>
     </div>
   )
 }
