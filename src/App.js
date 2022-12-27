@@ -1,8 +1,10 @@
 import './App.css';
+import TodoContainer from './TodoContainer';
 
 function App() {
   return (
-    <div>
+    <div id="mainDiv">
+      <TodoContainer/>
     </div>
   );
 }
