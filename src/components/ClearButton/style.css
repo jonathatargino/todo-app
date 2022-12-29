@@ -1,0 +1,11 @@
+.clearButton {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  color: hsl(235, 60%, 40%);
+}
