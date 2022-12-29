@@ -1,12 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import Activity from "../components/Activity";
-import ActivityForm from "../components/ActivityForm";
-import ActivityList from "../components/ActivityList";
+import ActivityForm from "../ActivityForm";
+import ActivityList from "../ActivityList";
+import ActivityCount from "../ActivityCount";
+import ClearButton from "../ClearButton"
 import "./style.css"
+import OptionBar from "../OptionBar";
 
 function TodoContainer(){
   const [activities, setActivities] = useState([]);
+  const [selectedOption, setSelectedOption] = useState("all")
 
   return (
     <div id="todoContainer">
@@ -16,19 +19,22 @@ function TodoContainer(){
         </div>
         <ActivityForm activities={activities} setActivities={setActivities}/>
       </div>
-      <ActivityList>
-        {activities.map((activity) => {
-          return(
-            <Activity 
-              title={activity.title} 
-              doneState={activity.isDone} 
-              key={activity.title}
-            />
-          )
-        })}
-      </ActivityList>
+      <div className="container">
+        <ActivityList 
+          activities={activities} 
+          setActivities={setActivities} 
+          selectedOption={selectedOption}
+        />
 
-
+        <div className="flex">
+          <ActivityCount activityList={activities}/>
+          <OptionBar 
+            selectedOption={selectedOption} 
+            setSelectedOption={setSelectedOption}
+          />
+          <ClearButton activities={activities} setActivities={setActivities}/>
+        </div>
+      </div>
     </div>
   )
 }
