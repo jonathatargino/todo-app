@@ -1,6 +1,8 @@
 .todoActivityTitle {
   margin-left: 30px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  color: hsl(234, 39%, 85%);
+  overflow-x: hidden;
 }
 
 .doneActivity {

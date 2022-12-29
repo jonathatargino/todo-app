@@ -6,7 +6,6 @@
   min-width: 400px;
   padding-left: 12px;
   padding-right: 12px;
-  border: 1px solid black;
 }
 
 .title {
@@ -19,4 +18,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.container {
+  background: hsl(235, 24%, 19%);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.2);
 }

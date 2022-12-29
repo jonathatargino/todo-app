@@ -1,9 +1,10 @@
 .todoActivity {
   display: flex;
-  align-items: center;
-  width: 300px;
-  border: 1px solid black;
-  padding: 8px;
+  height: 50px;
+  font-size: 1.1rem;
+  background: hsl(235, 24%, 19%);
+  border-bottom: 1px solid #50577A;
+  padding: 12px;
 }
 
 #todoActivityTitle {
