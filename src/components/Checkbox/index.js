@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css"
 
-function Checkbox({onClick}){
+function Checkbox({onClick, checked}){
   return (
     <input
+      checked={checked}
       type="checkbox"
-      onClick={onClick}
+      onChange={onClick}
     >
     </input>
   )
