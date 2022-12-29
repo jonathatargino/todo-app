@@ -1,6 +1,6 @@
 import React from "react";
 
-import Option from "../../Option";
+import Option from "../Option";
 import "./style.css"
 
 function OptionBar({selectedOption, setSelectedOption}){
