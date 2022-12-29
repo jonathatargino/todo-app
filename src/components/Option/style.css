@@ -1,0 +1,17 @@
+.option {
+  border: none;
+  font-size: 1.1rem;
+  background: hsl(235, 24%, 19%);
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.option:hover {
+  background: hsl(235, 50%, 19%);
+  cursor: pointer;
+}
+
+.selected {
+  background : hsl(235, 60%, 40%);
+}
