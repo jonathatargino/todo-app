@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import ActivityForm from "../ActivityForm";
 import ActivityList from "../ActivityList";
@@ -8,8 +8,23 @@ import "./style.css"
 import OptionBar from "../OptionBar";
 
 function TodoContainer(){
-  const [activities, setActivities] = useState([]);
+  let initialActivitiesArray = [];
+
+  if(localStorage.getItem('activities')){
+    initialActivitiesArray = JSON.parse(localStorage.getItem('activities'));
+  }
+
+  const [activities, setActivities] = useState(initialActivitiesArray);
   const [selectedOption, setSelectedOption] = useState("all")
+
+  const renderNumber = useRef(0)
+
+  useEffect(() => {
+    renderNumber.current++
+    if (renderNumber.current > 2){
+      localStorage.setItem('activities', JSON.stringify(activities))
+    }
+  },[activities])
 
   return (
     <div id="todoContainer">
